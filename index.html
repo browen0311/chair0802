@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椅子移動模擬器 - 拖曳版</title>
+    <style>
+        .board {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .piece {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: move;
+        }
+        .X { background-color: red; }
+        .O { background-color: blue; }
+        .middle { background-color: yellow; }
+        .valid-move { background-color: lightgreen; }
+        #moves, #history { margin-top: 20px; }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>椅子移動模擬器 - 拖曳版</h1>
+    <div class="board" id="board"></div>
+    <div id="moves">移動次數: 0</div>
+    <button id="reset">重置</button>
+    <button id="undo">還原上一步</button>
+    <div id="history">移動歷史：</div>
+    <script src="script.js"></script>
+</body>
+</html>
